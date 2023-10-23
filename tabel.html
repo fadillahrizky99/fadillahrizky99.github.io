@@ -2,12 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Penambahan link CSS -->
+    <link rel="stylesheet" href="tabel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="foto-saya.ico">
-    <link rel="stylesheet" href="tabel.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"> </script>
 </head>
 
 <body>
@@ -24,9 +27,7 @@
                 <li><a href="tabel.html" rel="noopener noreferrer"><i class="fas fa-table"></i> Tabel</a></li>
             </ul>
         </nav>
-        
 
-        <!-- Nama, NIM, Program Studi, Email, Password, Jenis Kelamin, Tanggal Lahir, dan Alamat -->
         <table class="custom-table">
             <tr>
                 <th>Nama</th>
@@ -34,51 +35,94 @@
                 <th>Program Studi</th>
                 <th>Email</th>
                 <th>Password</th>
-                <th>Jenis Kelamin</th>
-                <th>Tanggal Lahir</th>
+                <th>Kelamin</th>
+                <th>Tanggal</th>
                 <th>Alamat</th>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="namaData"></td>
+                <td id="nimData"></td>
+                <td id="prodiData"></td>
+                <td id="emailData"></td>
+                <td id="passwordData"></td>
+                <td id="kelaminData"></td>
+                <td id="tanggalData"></td>
+                <td id="alamatData"></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="namaData"></td>
+                <td id="nimData"></td>
+                <td id="prodiData"></td>
+                <td id="emailData"></td>
+                <td id="passwordData"></td>
+                <td id="kelaminData"></td>
+                <td id="tanggalData"></td>
+                <td id="alamatData"></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="namaData"></td>
+                <td id="nimData"></td>
+                <td id="prodiData"></td>
+                <td id="emailData"></td>
+                <td id="passwordData"></td>
+                <td id="kelaminData"></td>
+                <td id="tanggalData"></td>
+                <td id="alamatData"></td>
+            </tr>
+            <tr>
+                <td id="namaData"></td>
+                <td id="nimData"></td>
+                <td id="prodiData"></td>
+                <td id="emailData"></td>
+                <td id="passwordData"></td>
+                <td id="kelaminData"></td>
+                <td id="tanggalData"></td>
+                <td id="alamatData"></td>
+            </tr>
+            <tr>
+                <td id="namaData"></td>
+                <td id="nimData"></td>
+                <td id="prodiData"></td>
+                <td id="emailData"></td>
+                <td id="passwordData"></td>
+                <td id="kelaminData"></td>
+                <td id="tanggalData"></td>
+                <td id="alamatData"></td>
             </tr>
         </table>
-
     </main>
 
     <footer>
         <p>&copy; 2023 Fadillah Rizky Jungjunan</p>
     </footer>
+    
+    <script>
+        const nama = localStorage.getItem("nama");
+        const nim = localStorage.getItem("nim");
+        const prodi = localStorage.getItem("prodi");
+        const email = localStorage.getItem("email");
+        const password = localStorage.getItem("password");
+        const kelamin = localStorage.getItem("kelamin");
+        const tanggal = localStorage.getItem("tanggal");
+        const alamat = localStorage.getItem("alamat");
+
+        // Tampilkan data di dalam tabel
+        if (nama && email) {
+            document.getElementById("namaData").textContent = nama;
+            document.getElementById("nimData").textContent = nim;
+            document.getElementById("prodiData").textContent = prodi;
+            document.getElementById("emailData").textContent = email;
+            document.getElementById("passwordData").textContent = password;
+            document.getElementById("kelaminData").textContent = kelamin;
+            document.getElementById("tanggalData").textContent = tanggal;
+            document.getElementById("alamatData").textContent = alamat;
+        } else {
+            // Return Message Error
+        }
+    </script>
     <div id="particles-js"></div>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"> </script>
 </body>
-
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="script.js"></script>
-
 </html>
