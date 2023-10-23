@@ -71,6 +71,7 @@ header img {
 
 main {
     padding: 24px 64px;
+    margin-bottom: 100px;
 }
 
 main nav {
@@ -165,4 +166,16 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* RESONSIF CARD < 600 */
+@media screen and (max-width: 600px) {
+    main {
+        font-size: 10px;
+        height: 100vh;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
 }
