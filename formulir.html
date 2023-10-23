@@ -28,72 +28,72 @@
 
         <!-- KONTEN -->
         <form id="dataForm" onsubmit="submitData(event)" class="form-container">
-            <div class="form-group">
-                <label for="nama">Nama:</label>
-                <input type="text" id="nama" name="nama" required>
-            </div>
             
-            <div class="form-group">
-                <label for="nama">Nama:</label>
-                <input type="text" id="nama" name="nama" required>
-            </div>
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
 
-            <div class="form-group">
-                <label for="nim">NIM:</label>
-                <input type="text" id="nim" name="nim" required>
-            </div>
+            <label for="nim">NIM:</label>
+            <input type="text" id="nim" name="nim" required>
 
-            <div class="form-group">
-                <label for="prodi">Program Studi:</label>
-                <input type="text" id="prodi" name="prodi" required>
-            </div>
+            <label for="prodi">Program Studi:</label>
+            <input type="text" id="prodi" name="prodi" required>
 
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-            <div class="form-group">
-                <label>Jenis Kelamin:</label>
-                <input type="radio" id="laki" name="jenis-kelamin" value="Laki-laki" required>
-                <label for="laki">Laki-laki</label>
-                <input type="radio" id="perempuan" name="jenis-kelamin" value="Perempuan" required>
-                <label for="perempuan">Perempuan</label>
-            </div>
+            <label for="kelamin">jenis Kelamin:</label>
+            <input type="text" id="kelamin" name="kelamin" required>
 
-            <div class="form-group">
-                <label for="tgl-lahir">Tanggal Lahir:</label>
-                <input type="date" id="tgl-lahir" name="tgl-lahir" required>
-            </div>
+            <label for="tanggal">tanggal lahir:</label>
+            <input type="text" id="tanggal" name="tanggal" required>
 
-            <div class="form-group">
-                <label for="alamat">Alamat:</label>
-                <textarea id="alamat" name="alamat" required></textarea>
-            </div>
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" name="alamat" required></textarea>
 
-            <div class="form-group">
-                <button type="submit">Submit</button>
-            </div>
+            <button type="submit" onclick="saveData()">Submit</button>
+
             <!-- Tambahkan elemen-elemen lain sesuai kebutuhan -->
-        
-            <div class="form-group">
-                <button type="submit">Submit</button>
-            </div>
         </form>
     </main>
 
     <footer>
         <p>&copy; 2023 Fadillah Rizky Jungjunan</p>
     </footer>
-    <div id="particles-js"></div>
-</body>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="script.js"></script>
+    <script>
+        // Fungsi untuk menyimpan data ke Local Storage dan mengarahkan ke halaman tabel
+        function saveData(event) {
+            event.preventDefault();
+            const nama = document.getElementById("nama").value;
+            const nim = document.getElementById("nim").value;
+            const prodi = document.getElementById("prodi").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const kelamin = document.getElementById("kelamin").value;
+            const tanggal = document.getElementById("tanggal").value;
+            const alamat = document.getElementById("alamat").value;
+
+            // Simpan data ke Local Storage
+            localStorage.setItem("nama", nama);
+            localStorage.setItem("nim", nim);
+            localStorage.setItem("prodi", prodi);
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", password);
+            localStorage.setItem("kelamin", kelamin);
+            localStorage.setItem("tanggal", tanggal);
+            localStorage.setItem("alamat", alamat);
+
+            // Arahkan ke halaman tabel
+            window.location.href = "tabel.html";
+        }
+    </script>
+    <div id="particles-js"></div>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
 
 </html>
