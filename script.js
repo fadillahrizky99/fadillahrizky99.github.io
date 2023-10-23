@@ -1,8 +1,8 @@
-// Konfigurasi Particles.js
+// ini konfigurasi Particles.js
 particlesJS("particles-js", {
     particles: {
         number: {
-            value: 40,
+            value: 45,
             density: {
                 enable: true,
                 value_area: 880,
